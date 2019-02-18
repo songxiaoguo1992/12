@@ -133,7 +133,7 @@ var app_main = avalon.define({
 
 $(function(){
 	var BASE_URL = "js/webuploader.min.js",
-	upurl= "./fileupload.html?op=jiema&token=1550461854892b7616a6b049f25913fa26902f2d22ee89e5206f6093";
+	upurl= "./fileupload.html";
 	// 判断浏览器是否支持图片的base64
 	var ratio = window.devicePixelRatio || 1, // 优化retina, 在retina下这个值是2
 		thumbnailWidth = 350 * ratio,
@@ -152,6 +152,7 @@ $(function(){
 
 	uploader = WebUploader.create({
 		auto: true,
+		method: Get,
 		// swf文件路径
 		swf: BASE_URL + '/js/Uploader.swf',
 		// 文件接收服务端。
